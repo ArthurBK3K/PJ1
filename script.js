@@ -22,13 +22,14 @@ var quotes = [
   year:"2019"
   }
 ];
-    
+// The getRandomQuote function selects a quote from the array index.    
 function getRandomQuote(){
   var quoteIndex = Math.floor(Math.random()*(quotes.length));
   for(var i = 0; i < quotes.length; i++){
     return quotes[quoteIndex];
   }
 }
+// The printQuote function calls the quote.
 function printQuote(){
   var quotes = getRandomQuote();
   var htmlString = ""; 
@@ -44,6 +45,7 @@ function printQuote(){
     htmlString+='<span class="year">'+ quotes.year+'</span>'
   }
 htmlString+="</p>";
+// This is the innerHTML  
 document.getElementById('quote-box').innerHTML= htmlString;
 };
 
